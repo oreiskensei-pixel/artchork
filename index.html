@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ART+CHORK Landscape Architecture</title>
+<meta name="description" content="ART+CHORK is the landscape architecture practice of Artchork Pte Ltd, Singapore. Hotels, homes, gardens and parks designed for biodiversity.">
+<meta property="og:title" content="ART+CHORK Landscape Architecture">
+<meta property="og:description" content="Landscape architecture practice in Singapore. Hotels, homes, gardens and parks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300;1,500&family=Barlow+Condensed:wght@300;400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;
+  --bg:#020403; --brand:#9aa39e; --red:#d8352a; --fg:#f4f6f2; --mut:rgba(244,246,242,.64); --line:rgba(255,255,255,.16);
+  --serif:"Cormorant Garamond",Georgia,serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{background:var(--bg);color:var(--fg);font-family:var(--serif);font-size:20px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.skip{position:absolute;left:12px;top:-60px;background:#fff;color:#000;padding:8px 14px;z-index:100;font-family:var(--mono);font-size:13px}
+.skip:focus{top:12px}
+#c{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block}
+header{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:baseline;padding:22px 28px;background:linear-gradient(#000c,#0000)}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}.logo .mark{height:28px;width:auto}.logo .wm{font-size:27px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.mark{display:block;fill:none;stroke:var(--brand);stroke-width:14;stroke-linejoin:round;stroke-linecap:round;overflow:visible}
+.wm{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:300;letter-spacing:.05em;color:var(--brand);line-height:1;white-space:nowrap}
+.wm svg{height:.7em;overflow:visible;vertical-align:baseline;fill:none;stroke-width:7}
+.wm .wp{width:.46em;margin:0 .02em;stroke:var(--red)}
+.wm .wp circle{fill:var(--red);stroke:none;transform-box:fill-box;transform-origin:center}
+#brand{left:28px;top:64px;bottom:0;width:min(600px,46vw);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:min(36px,4vh)}
+.lock{display:flex;flex-direction:column;align-items:center;gap:20px}
+#hmark{width:clamp(60px,min(9vw,13vh),132px);height:auto}
+#hwm{font-size:clamp(38px,min(6vw,10vh),94px);font-weight:300}
+#hmark,#hwm,#hdot,#hint,#quote .w{opacity:0}
+#quote{font-weight:300;font-size:clamp(19px,min(2.1vw,3.6vh),31px);line-height:1.38;text-shadow:0 2px 24px #000,0 0 6px #000}
+#quote .w{display:inline-block}
+#hint{color:var(--mut)}
+.rw{opacity:.14;transition:opacity .5s}
+nav{display:flex;gap:26px}
+nav a{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--mut);padding:6px 0;transition:color .2s}
+nav a:hover{color:#fff}
+main{position:relative;z-index:5}
+#hero{height:960vh}
+.stick{position:sticky;top:0;height:100vh;height:100svh;pointer-events:none}
+.stick>*{position:absolute}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+#intro{left:28px;bottom:30px;color:var(--mut)}
+#scroll{left:50%;bottom:26px;transform:translateX(-50%);text-align:center;color:var(--mut)}
+#scroll i{display:block;width:1px;height:46px;margin:10px auto 0;background:linear-gradient(#fff,#fff0);animation:drip 2s ease-in-out infinite;transform-origin:top}
+@keyframes drip{0%{transform:scaleY(0)}60%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+section.page{position:relative;padding:20vh 28px;background:linear-gradient(90deg,transparent calc(50% - 640px),rgba(0,0,0,.74) calc(50% - 540px),rgba(0,0,0,.74) calc(50% + 540px),transparent calc(50% + 640px))}
+.wrap{max-width:1120px;margin:0 auto}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-bottom:18px}
+h2{font-weight:300;font-size:clamp(40px,6vw,84px);line-height:1;letter-spacing:-.01em;margin-bottom:40px}
+h2 em{font-weight:500}
+#clients .eyebrow{text-align:center;font-size:16px;margin-bottom:40px}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px}
+.filters button{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;background:none;color:var(--mut);border:1px solid var(--line);padding:10px 16px;cursor:pointer;transition:all .2s}
+.filters button:hover{color:#fff;border-color:#fff8}
+.filters button[aria-pressed=true]{color:#000;background:#fff;border-color:#fff}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:36px 32px}
+button.card{font:inherit;color:inherit;text-align:left;background:none;cursor:pointer;width:100%}
+.card{position:relative;aspect-ratio:16/9;border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;text-decoration:none;opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s,border-color .3s}
+.card.in{opacity:1;transform:none}
+.card.gone{display:none}
+.card:hover{border-color:#fff}
+.card .art{position:absolute;inset:0;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card:hover .art{transform:scale(1.07)}
+.card::before,.card::after{content:"";position:absolute;width:22px;height:22px;border:1.5px solid #fff;opacity:0;transition:opacity .3s,transform .3s;z-index:2}
+.card::before{top:12px;left:12px;border-right:0;border-bottom:0;transform:translate(8px,8px)}
+.card::after{bottom:12px;right:12px;border-left:0;border-top:0;transform:translate(-8px,-8px)}
+.card:hover::before,.card:hover::after{opacity:1;transform:none}
+.card .shade{position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.25),transparent 30%,transparent 45%,rgba(0,0,0,.82))}
+.card .meta,.card h3,.card .tag{position:relative;z-index:1}
+.card .meta{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.card h3{font-weight:500;font-size:28px;line-height:1.1;margin:6px 0 4px}
+.card .tag{position:absolute;top:18px;right:18px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);padding:3px 8px;background:#0008}
+.card .idx{position:absolute;top:14px;left:20px;font-family:var(--mono);font-size:11px;color:var(--mut);z-index:1}
+.two{display:grid;grid-template-columns:1.1fr 1fr;gap:60px}
+.lead{font-size:clamp(24px,2.6vw,34px);line-height:1.25;font-weight:300}
+.lead em{font-weight:500}
+dl{border-top:1px solid var(--line)}
+dl div{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+dt{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);padding-top:5px}
+dd{font-size:21px}
+.person{margin-top:46px;padding:26px;border:1px solid var(--line);position:relative}
+.person h3{font-weight:500;font-size:34px;line-height:1.1}
+.person p{color:var(--mut);margin-top:8px}
+.cats{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:30px;font-style:italic;color:var(--mut)}
+#contact .big{font-size:clamp(34px,5vw,70px);font-weight:300;line-height:1.05;max-width:16ch}
+#contact address{font-style:normal;margin-top:30px;color:var(--mut)}
+#contact .mail{margin-top:24px;font-size:clamp(20px,2vw,26px)}#contact .mail a{text-underline-offset:5px}
+footer{position:relative;z-index:5;background:#000;padding:30px 28px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:900px){.two{grid-template-columns:1fr;gap:40px}}
+@media(max-width:820px){
+  header{flex-wrap:wrap;row-gap:12px;padding:14px 16px 12px;background:linear-gradient(#000e 65%,#0000)}
+  nav{width:100%;justify-content:space-between;gap:12px;overflow-x:auto;scrollbar-width:none}
+  nav a{font-size:11px;letter-spacing:.08em;white-space:nowrap}
+}
+@media(max-width:600px){
+  body{font-size:18px}.logo .mark{height:22px}.logo .wm{font-size:22px}
+  #brand{left:16px;right:16px;width:auto;top:112px;bottom:9vh;justify-content:space-between;align-items:center;text-align:center;gap:20px}
+  #hmark{width:70px}#hwm{font-size:46px}#quote{font-size:21px}
+  .grid{grid-template-columns:1fr}section.page{padding:11vh 16px}dl div{grid-template-columns:1fr;gap:2px}
+  #intro{left:16px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rw{opacity:1;transition:none}.card{transition:none;opacity:1;transform:none}#scroll i{animation:none}}
+.phil{display:grid;grid-template-columns:1fr 1.15fr;gap:100px;align-items:start}
+.phil h2{margin-bottom:0}
+.phil .lead{margin-bottom:28px}
+.phil p.body{color:var(--mut);margin-bottom:20px;max-width:62ch}
+.sub{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin:120px 0 36px}
+.team{display:grid;grid-template-columns:repeat(12,1fr);gap:64px 40px}
+.member{display:flex;flex-direction:column;gap:14px}.member .txt{display:flex;flex-direction:column;gap:6px}.team{container-type:inline-size}
+.member.head,.member.rest{align-items:center;text-align:center}.member.head .txt,.member.rest .txt{align-items:center}
+.member.head{grid-column:span 4}.member.head .ph,.member.rest .ph{width:calc(.7*((100cqw - 440px)/3 + 120px))}
+@media(max-width:900px){.member.head .ph,.member.rest .ph{width:70%}}.member.rest{grid-column:span 3}
+.grp{grid-column:1/-1;text-align:center;margin-bottom:-36px;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+@media(min-width:901px){.member.c2{grid-column:4/span 3}}
+.member.dir{grid-column:span 12;flex-direction:row;align-items:center;gap:48px}.member.dir .ph{width:min(310px,40%);flex:none}
+.member .ph{position:relative;aspect-ratio:4/5;overflow:hidden;border:1px solid var(--line);background:radial-gradient(circle at 30% 25%,#14201a,#030504 70%)}
+.member img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.member:hover img{transform:scale(1.04)}
+.member .mono2{position:absolute;inset:0;display:grid;place-items:center;font-size:54px;font-weight:300;color:var(--mut)}
+.member.dir .mono2{font-size:90px}.member.rest h3{font-size:19px}.member.rest .nick{font-size:16px}.member.rest .role{font-size:10px}
+.member .soon{position:absolute;left:12px;bottom:10px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.member h3{font-weight:500;font-size:24px;line-height:1.15}
+.member.dir h3{font-size:clamp(34px,3.6vw,52px);font-weight:300}
+.member .nick{font-style:italic;color:var(--mut);font-size:18px}
+.member .role{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.logos{list-style:none;display:flex;flex-wrap:wrap;justify-content:center}
+section#clients{background:linear-gradient(90deg,transparent calc(50% - 640px),rgba(0,0,0,.3) calc(50% - 540px),rgba(0,0,0,.3) calc(50% + 540px),transparent calc(50% + 640px))}
+.logos li{flex:0 0 25%;height:170px;display:grid;place-items:center;padding:20px}
+.logos img{display:block;max-width:82%;max-height:100%;height:auto}
+@media(max-width:700px){.logos li{flex-basis:50%;height:130px}}
+@media(max-width:900px){.phil{grid-template-columns:1fr;gap:34px}.member.head,.member.rest{grid-column:span 6}}
+@media(max-width:600px){.member.head,.member.rest{grid-column:span 6}.member.dir{flex-direction:column;align-items:flex-start;gap:20px}.member.dir .ph{width:70%}}
+.org{display:grid;justify-items:center}
+.org .top{padding:16px 28px;border:1px solid rgba(255,255,255,.55);font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+.org .top small{display:block;color:var(--mut);letter-spacing:.04em;margin-top:6px;text-transform:none;font-family:var(--serif);font-style:italic;font-size:17px}
+.org .stem{width:1px;height:26px;background:var(--line)}
+.org .cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;width:100%;position:relative;padding-top:26px}
+.org .cols::before{content:"";position:absolute;top:0;left:25%;right:25%;height:26px;border:1px solid var(--line);border-bottom:0}
+.org .dept{border:1px solid var(--line);background:rgba(0,0,0,.35)}
+.org .dept h4{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:14px 18px;border-bottom:1px solid var(--line);color:var(--mut);font-weight:400}
+.org .r{padding:12px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:6px 16px;flex-wrap:wrap}
+.org .r:last-child{border-bottom:0}
+.org .r.head{background:rgba(255,255,255,.05)}
+.org .r .t{font-size:19px}
+.org .r.head .t{font-weight:500}
+.org .r.vacant .t{color:var(--mut)}
+.org .r .who{color:var(--mut);font-style:italic;font-size:17px}
+.org .support{width:calc(50% - 10px);margin-top:26px}
+#proj{width:min(1400px,94vw,147vh);max-height:94vh;margin:auto;padding:0;border:1px solid var(--line);background:#060907;color:var(--fg);overflow:auto}
+#proj::backdrop{background:rgba(0,0,0,.84)}
+#proj .stage{position:relative;aspect-ratio:16/9;background:#000}
+#proj .stage img{width:100%;height:100%;object-fit:contain;display:block}
+#proj button{font-family:var(--mono);color:#fff;background:rgba(0,0,0,.6);border:1px solid var(--line);cursor:pointer;transition:border-color .2s}
+#proj button:hover{border-color:#fff}
+#proj .nv{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:60px;font-size:20px}
+#proj .prev{left:12px}#proj .next{right:12px}
+#proj .x{position:absolute;top:12px;right:12px;z-index:2;padding:8px 12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+#pCount{position:absolute;left:14px;bottom:12px;background:rgba(0,0,0,.6);padding:4px 8px;color:var(--mut)}
+#proj .pinfo{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;padding:34px}
+#pTitle{font-weight:300;font-size:clamp(30px,3.4vw,46px);line-height:1.05;margin-bottom:16px}
+#pText{color:var(--mut)}
+#pMeta div{grid-template-columns:84px 1fr;gap:14px;padding:12px 0}#pMeta dd{font-size:18px}
+@media(max-width:700px){#proj .pinfo{grid-template-columns:1fr;gap:22px;padding:20px 16px}#proj .nv{width:34px;height:46px}#pMeta div{grid-template-columns:1fr;gap:2px}}
+@media(max-width:700px){.org .cols,.org .cols{grid-template-columns:1fr}.org .support{width:100%}.org .cols::before{display:none}}
+footer .links{display:flex;gap:22px}
+footer .links button{font:inherit;letter-spacing:inherit;text-transform:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+footer .links button:hover{color:#fff}
+.legal{width:min(780px,94vw);max-height:90vh;margin:auto;padding:0 40px 44px;border:1px solid var(--line);background:#060907;color:var(--fg);overflow:auto}
+.legal::backdrop{background:rgba(0,0,0,.84)}
+.legal form{position:sticky;top:0;display:flex;justify-content:flex-end;padding:14px 0;margin:0 -24px 10px 0;background:#060907}
+.legal form button{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:none;border:1px solid var(--line);padding:8px 12px;cursor:pointer}
+.legal form button:hover{border-color:#fff}
+.legal h2{font-size:clamp(34px,4.4vw,54px);margin-bottom:12px}
+.legal h3{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg);font-weight:400;margin:32px 0 10px}
+.legal p,.legal li{color:var(--mut);font-size:18px;max-width:64ch}
+.legal p+p,.legal ul+p{margin-top:10px}
+.legal ul{padding-left:22px;margin-top:8px}
+@media(max-width:600px){.legal{padding:0 16px 30px}.legal form{margin-right:0}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="mk" viewBox="12 0 384 322"><path d="M218 245H290L150 10 22 245H187A102 102 0 1 0 245 118"/></symbol></svg>
+<a class="skip" href="#works">Skip to works</a>
+<canvas id="c" aria-hidden="true"></canvas>
+<header>
+  <a class="logo" href="#top" aria-label="ART+CHORK, home"><svg class="mark" viewBox="12 0 384 322" aria-hidden="true"><use href="#mk"/></svg><span class="wm" aria-hidden="true">ART<svg class="wp" viewBox="0 0 60 100"><circle cx="30" cy="10" r="7"/><path d="M30 30V100M6 64H54"/></svg>CHORK</span></a>
+  <nav aria-label="Primary"><a href="#philosophy">Philosophy</a><a href="#works">Works</a><a href="#team">Team</a><a href="#clients">Clients</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main id="top">
+  <section id="hero" aria-label="Introduction">
+    <div class="stick">
+      <p id="intro" class="mono">Landscape architecture<br>Singapore</p>
+      <p id="scroll" class="mono">Scroll to bloom<i></i></p>
+      <div id="brand">
+        <div class="lock">
+          <svg id="hmark" class="mark" viewBox="12 0 384 322" aria-hidden="true"><use href="#mk"/></svg>
+          <h1 id="hwm" class="wm"><span class="sr">ART+CHORK</span><span aria-hidden="true">ART<svg class="wp" viewBox="0 0 60 100"><circle id="hdot" cx="30" cy="10" r="7"/><path d="M30 30V100M6 64H54"/></svg>CHORK</span></h1>
+        </div>
+        <p id="quote">Like the artichoke, whose beauty unfolds into an unexpected flower, we believe that every place holds a beauty waiting to be revealed. Our work is not simply to create, but to discover, interpret and manifest what is already there.</p>
+        <p id="hint" class="mono">Move across the garden to track it</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="philosophy" class="page">
+    <div class="wrap phil">
+      <div>
+        <p class="eyebrow">Design philosophy</p>
+        <h2>Reconnecting humanity with <em>nature</em></h2>
+      </div>
+      <div>
+        <p class="lead">Landscape design is at the heart of ART+CHORK. We believe landscape is a bridge connecting humanity with the countless forms of life with which we share our planet.</p>
+        <p class="body">As biodiversity continues to decline, we see landscape design as an opportunity to preserve and enrich nature while creating meaningful encounters between people and the natural world.</p>
+        <p class="body">Rather than simply creating something new, we seek to discover the inherent beauty and potential of each place, nurture its ecological richness, and manifest environments where all forms of life can flourish together.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="name" class="page">
+    <div class="wrap phil">
+      <div>
+        <p class="eyebrow">The name</p>
+        <h2 class="wm" style="font-size:clamp(52px,7vw,104px)"><span class="sr">ART+CHORK</span><span aria-hidden="true">ART<svg class="wp" viewBox="0 0 60 100"><circle cx="30" cy="10" r="7"/><path d="M30 30V100M6 64H54"/></svg>CHORK</span></h2>
+      </div>
+      <div>
+        <dl>
+          <div><dt>Art</dt><dd>The manifestation of something that cannot be put into words.</dd></div>
+          <div><dt>Chork</dt><dd>A fork and a pair of chopsticks joined into one utensil: an invention that seems useful, yet never quite works.</dd></div>
+        </dl>
+        <p class="body" style="margin-top:28px">The chork stands for the conflict and inequity between East and West, today spoken of as the Global North and the Global South.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="works" class="page">
+    <div class="wrap">
+      <p class="eyebrow">Selected works</p>
+      <h2>Places that <em>host life</em></h2>
+      <div class="filters" role="group" aria-label="Filter works by category" id="filters"></div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section id="team" class="page">
+    <div class="wrap">
+      <p class="eyebrow">Our team</p>
+      <h2>The people behind <em>the work</em></h2>
+      <div class="team" id="teamGrid"></div>
+      <p class="sub">Studio structure</p>
+      <div class="org" id="org"></div>
+    </div>
+  </section>
+
+  <section id="clients" class="page">
+    <div class="wrap">
+      <p class="eyebrow">Our clients</p>
+      <ul class="logos" id="clientGrid"></ul>
+    </div>
+  </section>
+
+  <section id="studio" class="page">
+    <div class="wrap">
+      <p class="eyebrow">Studio</p>
+      <div class="two">
+        <div>
+          <p class="lead"><em>ART+CHORK</em> is the landscape architecture practice of Artchork Pte Ltd, a Singapore firm creating sustainable environments that promote biodiversity.</p>
+        </div>
+        <dl>
+          <div><dt>Practice</dt><dd>Landscape design and landscape architecture</dd></div>
+          <div><dt>Legal name</dt><dd>Artchork Pte Ltd</dd></div>
+          <div><dt>UEN</dt><dd>202239198N</dd></div>
+          <div><dt>Founded</dt><dd>4 November 2022</dd></div>
+          <div><dt>Studio</dt><dd>311 Old Birdcage Walk, #02-05, Singapore 798484</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="page">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <p class="big">Let's grow something together.</p>
+      <address>311 Old Birdcage Walk, #02-05<br>Singapore 798484</address>
+      <p class="mail">For more information, write to <a href="mailto:info@artchork.com">info@artchork.com</a></p>
+    </div>
+  </section>
+</main>
+<dialog id="proj" aria-labelledby="pTitle">
+  <div class="stage">
+    <img id="pImg" alt="">
+    <button class="nv prev" type="button" aria-label="Previous slide">&larr;</button>
+    <button class="nv next" type="button" aria-label="Next slide">&rarr;</button>
+    <span id="pCount" class="mono"></span>
+    <button class="x" type="button" aria-label="Close project">Close</button>
+  </div>
+  <div class="pinfo">
+    <div><p class="eyebrow" id="pCat"></p><h3 id="pTitle"></h3><p id="pText"></p></div>
+    <dl id="pMeta"></dl>
+  </div>
+</dialog>
+<dialog id="terms" class="legal" aria-labelledby="tTitle">
+  <form method="dialog"><button>Close</button></form>
+  <p class="eyebrow">Last updated 17 November 2026</p>
+  <h2 id="tTitle">Terms of use</h2>
+  <p>This website is operated by Artchork Pte Ltd (UEN 202239198N), trading as ART+CHORK, 311 Old Birdcage Walk, #02-05, Singapore 798484. By using the site you accept these terms.</p>
+  <h3>Content and copyright</h3>
+  <p>All text, drawings, renderings, photographs and the ART+CHORK name and mark are owned by Artchork Pte Ltd or used with the permission of our clients and collaborators. You may view and share links to this site for personal or professional reference. You may not copy, reproduce, modify or publish any of its content without our written permission.</p>
+  <h3>Project information</h3>
+  <p>Projects are shown to illustrate our work. Images may be design renderings rather than built conditions, and details such as status, size and scope are given in good faith as at the date shown. Project names and client names belong to their respective owners.</p>
+  <h3>No professional advice</h3>
+  <p>Nothing on this site is professional advice or an offer of services. Any engagement is governed by a separate written agreement.</p>
+  <h3>Liability</h3>
+  <p>The site is provided as is. To the extent permitted by law, Artchork Pte Ltd is not liable for any loss arising from use of the site or reliance on its content, or from third-party sites it links to.</p>
+  <h3>Governing law</h3>
+  <p>These terms are governed by the laws of Singapore, and the courts of Singapore have exclusive jurisdiction. We may update these terms at any time by posting a revised version here.</p>
+</dialog>
+<dialog id="privacy" class="legal" aria-labelledby="prTitle">
+  <form method="dialog"><button>Close</button></form>
+  <p class="eyebrow">Last updated 17 November 2026</p>
+  <h2 id="prTitle">Privacy policy</h2>
+  <p>Artchork Pte Ltd handles personal data in line with Singapore's Personal Data Protection Act 2012 (PDPA). This policy explains what this website collects and how we use it.</p>
+  <h3>What we collect</h3>
+  <p>This site has no forms, accounts, analytics or advertising, and sets no cookies of its own. If you contact us, we receive the details you choose to send, such as your name, email address, phone number and project information.</p>
+  <h3>Third-party services</h3>
+  <p>To display the site, your browser loads fonts from Google Fonts and a graphics library from cdnjs (Cloudflare). These providers receive your IP address and browser details as part of serving those files, under their own privacy policies.</p>
+  <h3>How we use your data</h3>
+  <ul>
+    <li>To reply to your enquiry and discuss potential projects.</li>
+    <li>To deliver and administer services you engage us for.</li>
+    <li>To meet our legal and regulatory obligations.</li>
+  </ul>
+  <p>We do not sell your personal data or use it for marketing without your consent. We share it only with consultants or service providers involved in your project, or where required by law.</p>
+  <h3>Retention and security</h3>
+  <p>We keep personal data only as long as needed for these purposes or as required by law, and protect it with reasonable security arrangements.</p>
+  <h3>Your rights</h3>
+  <p>You may ask to access or correct the personal data we hold about you, or withdraw consent to its use. Write to our Data Protection Officer at <a href="mailto:info@artchork.com">info@artchork.com</a> or 311 Old Birdcage Walk, #02-05, Singapore 798484.</p>
+</dialog>
+<footer><span>&copy; 2026 Artchork Pte Ltd</span><span class="links"><button type="button" data-legal="terms" aria-haspopup="dialog">Terms</button><button type="button" data-legal="privacy" aria-haspopup="dialog">Privacy</button></span><span>UEN 202239198N</span></footer>
+
+<script>
+/* ---------- CONTENT: edit here. Add img:"path.jpg" to show a photo. ---------- */
+const CATS=[["all","All"],["hospitality","Hospitality"],["commercial","Commercial"],["residence","Residence"],["parks","Parks / Gardens"],["others","Others"]];
+/* Works come from "Project Infos" PDF (artichoke-photos/make_works.py renders works/<slug>/cover.jpg + 01.jpg..). n = number of slides */
+const PROJECTS=[
+ {slug:"puri",cat:"hospitality",title:"Marriott Puri",location:"Puri, Odisha, India",type:"Hospitality",status:"Ongoing",size:"3.8 acres",client:"SNM Hotel & Resorts Private Limited",n:2,
+  text:"Inspired by the spiritual heritage of Puri and the deities of the Jagannath Temple, Seven Stories of Nature is a landscape vision that celebrates the connection between spirituality and the natural world. Through seven distinct garden experiences, the landscape explores the elements of soil, light, water and planting, creating a series of tranquil sanctuaries that reflect the rhythms of nature. Each garden tells its own story, blending ecological sensitivity, cultural inspiration and sensory experiences. Together, the gardens create a journey of discovery, offering guests moments of serenity, reflection and connection with nature."},
+ {slug:"zanzibar",cat:"hospitality",title:"JW Marriott Zanzibar",location:"Zanzibar, Tanzania",type:"Hospitality",status:"Ongoing",size:"16 acres",client:"Barkez Palace Limited",n:1,
+  text:"Inspired by the cultural heritage of Oman and the natural beauty of Zanzibar, the landscape draws upon four defining elements: wind, shade, water and stone. The design blends the tranquillity of Oman's traditional oasis gardens with Zanzibar's distinctive coastal character, expressed through calming water features, shaded retreats, natural stone textures and tropical planting. Together, these elements create a harmonious resort environment that celebrates the meeting of two cultures, offering guests a serene and immersive connection with nature."},
+ {slug:"lumbini-marriott",cat:"hospitality",title:"Marriott Lumbini",location:"Lumbini, Nepal",type:"Hospitality",status:"Ongoing",size:"9 acres",client:"M.D. Lumbini Palace Resort Ltd",n:2,
+  text:"Set within the secluded 170-acre Lumbini Royal Resort, the Marriott landscape is conceived as a continuous journey through tranquil water gardens. From vast water bodies and the villa lagoon to intimate reflecting pools, streams and water courts, water connects every part of the hotel landscape. The experience remains calm, contemplative and restorative, establishing tranquility through water as the defining identity of the resort."},
+ {slug:"courtyard-bengaluru",cat:"hospitality",title:"Courtyard by Marriott Bengaluru",location:"Bengaluru, India",type:"Hospitality",status:"Ongoing",size:"4 acres",client:"Bagmane",n:2,
+  text:"The name “Courtyard” draws inspiration from traditional courtyards: intimate, functional spaces for gathering and relaxation. The landscape reflects this with lush greenery, water features and secluded spaces, offering a retreat-like atmosphere."},
+ {slug:"st-regis",cat:"hospitality",title:"St. Regis Bangalore",location:"Bengaluru, India",type:"Hospitality",status:"Ongoing",size:"4 acres",client:"Bagmane",n:1,
+  text:"Inspired by the hotel's iconic black-and-white chequered flooring, classical architectural detailing and conservatory spaces, the gardens reinterpret these elements through structured pathways, ornamental planting, intimate garden retreats and sophisticated outdoor spaces. The result is a landscape that celebrates the timeless character of St. Regis while creating a contemporary sense of luxury, tranquility and exclusivity."},
+ {slug:"27-summit",cat:"residence",title:"27 Summit",location:"Bengaluru, India",type:"High-end residence",status:"Completed",size:"3.7 acres",client:"MAIA Estates",n:1,
+  text:"The landscape concept celebrates the relationship between contemporary architecture and tropical nature, creating a green sanctuary within an urban residential setting. Inspired by the richness of tropical gardens, the design brings together lush layered planting, flowering trees, tranquil water features and open green spaces to create a series of inviting outdoor retreats. From the landscaped arrival experience to the communal gardens and elevated leisure deck, each space is thoughtfully designed to encourage relaxation, recreation and social interaction."},
+ {slug:"pelican-garden",cat:"residence",title:"Pelican Garden",location:"Bengaluru, India",type:"High-rise residential",status:"Ongoing",size:"4 acres",client:"MAIA Estates",n:2,
+  text:"The landscape design is inspired by the relationship between architecture, nature and the surrounding environment. Responding to the building's form and the site's natural characteristics, the design creates a harmonious connection between the built and natural landscapes. Through a collection of distinct garden spaces, thoughtful planting and carefully integrated outdoor experiences, the landscape celebrates the changing moods of nature throughout the day, creating a dynamic yet tranquil environment for residents."},
+ {slug:"bsk-seven",cat:"residence",title:"BSK Seven",location:"Bengaluru, India",type:"High-rise residential",status:"Ongoing",size:"4 acres",client:"MAIA Estates",n:2,
+  text:"Inspired by the site's rich natural greenery and cultural heritage, the landscape seeks to preserve and enhance the existing environment while creating meaningful connections between people and nature. The gardens are envisioned as shared spaces that encourage community interaction, cultural appreciation and a sense of belonging. Embracing the evolving relationship between physical and digital lifestyles, the design explores how technology can further enrich social connections and enhance the experience of nature."},
+ {slug:"eldeco-terra-sol",cat:"residence",title:"ELDECO Terra and Sol",location:"Manesar, India",type:"High-rise residential",status:"Ongoing",size:"2.7 acres",client:"BIAS Architecture",n:2,
+  text:"The landscape design aims to set a new standard for ecological sustainability in urban development, serving as a beacon for environmentally resilient development. By interweaving ecological design with the profound culture of India, the development not only supports the well-being of its residents but also contributes to the city's overall sustainability."},
+ {slug:"eldeco-sigma",cat:"residence",title:"ELDECO Sigma",location:"Greater Noida, India",type:"High-rise residential",status:"Ongoing",size:"7.4 acres",client:"BIAS Architecture",n:2,
+  text:"Set within New Delhi's evolving urban landscape, ELDECO SIGMA-3 explores the relationship between contemporary high-rise living and nature. The landscape transforms fragmented outdoor spaces into pockets of greenery, creating inviting gardens and communal retreats within the dense mixed-use development."},
+ {slug:"pinnacle",cat:"residence",title:"Pinnacle Residence",location:"Bengaluru, India",type:"High-rise residential",status:"Ongoing",size:"5.7 acres",client:"One Embassy",n:3,
+  text:"Inspired by the symbolism of lanterns in Indian and Asian cultures, the landscape is designed around five distinctive lanterns that represent light, guidance and gathering. Four seasonal lanterns anchor individual garden experiences, each offering a unique atmosphere inspired by the changing rhythms of nature. At the heart of the landscape, a fifth lantern serves as a central icon, positioned beside the infinity pool and cascading water feature to create a striking focal point. Together, the five lanterns bring the gardens together as a harmonious landscape, celebrating cultural heritage, nature and the art of communal living."},
+ {slug:"hatworks",cat:"residence",title:"Hatworks",location:"Bengaluru, India",type:"High-end residential",status:"Ongoing",size:"1 acre",client:"MAIA Estates",n:2,
+  text:"Inspired by the heritage of Imperial Hatworks, a landmark of Bengaluru's history since the 1920s, the landscape celebrates the site's legacy of craftsmanship, creativity and community. Drawing from the architectural identity, geometry and material palette of the development, the landscape translates these elements into a cohesive garden environment. Through thoughtfully designed social spaces, lush planting, crafted details and multifunctional outdoor areas, the design creates opportunities for interaction and everyday living. The result is a contemporary residential landscape that honours the past while creating new memories for generations to come."},
+ {slug:"beacon",cat:"commercial",title:"Beacon",location:"Bengaluru, India",type:"Mixed development",status:"Ongoing",size:"3 acres",client:"MAIA Estates",n:1,
+  text:"A softscape and hardscape proposal for an office project in Bangalore, with a linear park, a sports garden and a mobile store. The architecture carries a strong fabric of traditional details without compromising the thermal and light quality the offices need, and the landscape carries the same concept at a different scale."},
+ {slug:"putrajaya",cat:"parks",title:"Putrajaya Tower",location:"Putrajaya, Malaysia",type:"Parks and gardens",status:"Ongoing",size:"12 acres",client:"",n:1,
+  text:"Inspired by the fluid relationship between architecture and nature, the landscape is envisioned as a vibrant urban park that brings people closer to the outdoors. Organic pathways, lush tropical planting and sculptural architectural canopies create a series of interconnected spaces for recreation, social interaction and relaxation. Elevated garden walks and inviting public plazas encourage exploration, while integrated commercial spaces bring activity and vibrancy into the park."},
+ {slug:"japanese-garden",cat:"parks",title:"Japanese Garden Bangalore",location:"Bengaluru, India",type:"Parks and gardens",status:"Ongoing",size:"1.7 acres",client:"Akruthi Infra Build Developers Pvt Ltd",n:2,
+  text:"Inspired by traditional Japanese garden principles, the landscape blends the timeless art of Sakuteki with contemporary design and modern expressions of nature. Through carefully composed gardens, hidden details and thoughtfully curated elements, visitors are invited to explore and discover new experiences along the way. Embracing the Japanese philosophy of Utsuroi, the garden evolves with time, revealing different moods and atmospheres through changing seasons, natural light and evening illumination. The result is a tranquil garden experience where tradition, innovation and nature exist in harmony."},
+ {slug:"lumbini-wedding",cat:"parks",title:"Lumbini Wedding Gardens",location:"Lumbini, Nepal",type:"Parks and gardens",status:"Ongoing",size:"20 acres",client:"M.D. Lumbini Palace Resort Ltd",n:2,
+  text:"The Lotus Floating Garden offers a serene setting inspired by purity and harmony, while the Royal Peacock Garden celebrates beauty, prosperity and festivity through a vibrant waterfront landscape. Completing the collection, the Royal Palace Garden reinterprets royal wedding traditions through a multi-storey boutique venue, bringing ceremonial, ritual and reception spaces together in one elegant setting. Together, the three destinations create a unique wedding experience where cultural traditions, meaningful symbolism and celebration come together."},
+ {slug:"sambhala-quay",cat:"parks",title:"Lumbini Sambhala Quay",location:"Lumbini, Nepal",type:"Parks and gardens",status:"Ongoing",size:"20 acres",client:"M.D. Lumbini Palace Resort Ltd",n:2,
+  text:"The landscape vision for the Lumbini Integrated Resort blends Nepal's profound spiritual heritage with the refined contemporary architecture of the development. Rooted in Nepal's tradition of honouring nature as sacred, the design expresses a modern interpretation of the country's “spiritual ecology” through geometry, planting and spatial experience, without relying on literal cultural symbolism."},
+];
+const TEAM=[
+ {name:"Yukio Hasegawa",role:"Founding Director / Design Principal",img:"img/p/yukio.jpg",tier:"dir"},
+ {name:"Stephen Teo",nick:"Stephen",role:"Head of Admin",img:"img/p/stephen.jpg",tier:"head"},
+ {name:"Asiah Azman",nick:"Asiah",role:"Head of Landscape Design",img:"img/p/asiah.jpg",tier:"head"},
+ {name:"Anastacio D. Guerrero III",nick:"Bok",role:"Head of Technical Design",img:"img/p/bok.jpg",tier:"head"},
+ {name:"Muhammad Nur Anwar",nick:"Anwar",role:"Landscape Designer",img:"img/p/anwar.jpg",grp:"Landscape designers"},
+ {name:"Farid Arief Bin Abd Rahim",nick:"Farid",role:"Landscape Designer",img:"img/p/farid.jpg",grp:"Landscape designers"},
+ {name:"Andrea Jane Dalde",nick:"AJ",role:"Technical Designer",img:"img/p/andrea.jpg",grp:"Technical designers"},
+ {name:"Karen G. Jasareno",nick:"Tin",role:"Technical Designer",img:"img/p/karen.jpg",grp:"Technical designers"},
+ {name:"Janeth L. Pancho",nick:"Janeth",role:"Technical Designer",img:"img/p/janeth.jpg",grp:"Technical designers"},
+ {name:"Daryll Ace M. Mercado",nick:"Ace",role:"Technical Designer",img:"img/p/daryll.jpg",grp:"Technical designers"},
+];
+const ORG={
+ top:["Founding Director & Design Principal","Yukio Hasegawa"],
+ depts:[
+  ["Landscape Design",[["Head of Landscape Design","Asiah",1],["Landscape Designer","Anwar, Farid"]]],
+  ["Technical Design",[["Head of Technical Design","Bok",1],["Technical Designer","AJ, Tin, Janeth, Ace"]]]],
+ support:[["Head of Administration","Stephen",1]]
+};
+/* Client logos: img/clients/<slug>.png, transparent on black (artichoke-photos/clients/make_clients.py) */
+const CLIENTS=[["jll","JLL"],["mubadala","Mubadala"],["four-seasons","Four Seasons"],["jw-marriott","JW Marriott"],["st-regis","St. Regis"],["maia","MAIA Estates"],["embassy","Embassy Group"],["marriott","Marriott"],["bagmane","Bagmane"],["courtyard","Courtyard by Marriott"],["eldeco","Eldeco"]];
+
+const el=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e};
+
+/* Works grid */
+const grid=document.getElementById("grid"),filt=document.getElementById("filters");
+const label=Object.fromEntries(CATS);
+PROJECTS.forEach((p,i)=>{
+  const a=el("button","card");a.type="button";a.dataset.cat=p.cat;a.setAttribute("aria-haspopup","dialog");
+  const art=el("div","art"),im=el("img");im.src=`works/${p.slug}/cover.jpg`;im.alt="";im.loading="lazy";art.appendChild(im);a.appendChild(art);
+  a.appendChild(el("span","shade"));
+  a.appendChild(el("span","tag",p.status));
+  a.appendChild(el("span","idx",String(i+1).padStart(2,"0")));
+  a.appendChild(el("span","meta",`${label[p.cat]} · ${p.location}`));
+  a.appendChild(el("h3",null,p.title));
+  a.onclick=()=>openProject(i);
+  grid.appendChild(a);
+});
+CATS.filter(([k])=>k==="all"||PROJECTS.some(p=>p.cat===k)).forEach(([k,n],i)=>{
+  const b=el("button",null,n);b.type="button";b.setAttribute("aria-pressed",i==0);
+  b.onclick=()=>{
+    filt.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+    grid.querySelectorAll(".card").forEach(c=>{c.classList.toggle("gone",k!=="all"&&c.dataset.cat!==k);c.classList.add("in")});
+  };
+  filt.appendChild(b);
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+grid.querySelectorAll(".card").forEach((c,i)=>{c.style.transitionDelay=(i%3)*90+"ms";io.observe(c)});
+
+/* Project viewer: cover first, then the presentation slides (all 16:9) */
+const dlg=document.getElementById("proj"),pImg=document.getElementById("pImg");
+let cur=0,si=0;
+const slide=(p,k)=>k?`works/${p.slug}/${String(k).padStart(2,"0")}.jpg`:`works/${p.slug}/cover.jpg`;
+function showSlide(d){
+  const p=PROJECTS[cur],n=p.n+1;si=(si+d+n)%n;
+  pImg.src=slide(p,si);pImg.alt=`${p.title}, image ${si+1} of ${n}`;
+  document.getElementById("pCount").textContent=`${String(si+1).padStart(2,"0")} / ${String(n).padStart(2,"0")}`;
+  new Image().src=slide(p,(si+1)%n);
+}
+function openProject(i){
+  const p=PROJECTS[cur=i];si=0;
+  document.getElementById("pCat").textContent=label[p.cat];
+  document.getElementById("pTitle").textContent=p.title;
+  document.getElementById("pText").textContent=p.text;
+  const meta=document.getElementById("pMeta");meta.textContent="";
+  [["Location",p.location],["Type",p.type],["Status",p.status],["Size",p.size],["Client",p.client]].forEach(([k,v])=>{if(!v)return;const r=el("div");r.appendChild(el("dt",null,k));r.appendChild(el("dd",null,v));meta.appendChild(r)});
+  showSlide(0);dlg.showModal();dlg.scrollTop=0;
+}
+dlg.querySelector(".prev").onclick=()=>showSlide(-1);
+dlg.querySelector(".next").onclick=()=>showSlide(1);
+dlg.querySelector(".x").onclick=()=>dlg.close();
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+dlg.addEventListener("keydown",e=>{if(e.key==="ArrowLeft")showSlide(-1);if(e.key==="ArrowRight")showSlide(1)});
+
+/* Team: the founding director is the largest portrait */
+const tg=document.getElementById("teamGrid");
+let lastGrp;
+TEAM.forEach(m=>{
+  // a group of exactly two sits in the middle of the row
+  const first=m.grp&&m.grp!==lastGrp,c2=first&&TEAM.filter(x=>x.grp===m.grp).length===2;
+  if(first){tg.appendChild(el("p","grp",m.grp));lastGrp=m.grp}
+  const d=el("article","member "+(m.tier||"rest")+(c2?" c2":"")),ph=el("div","ph");
+  if(m.img){const im=el("img");im.src=m.img;im.alt=m.name;im.loading="lazy";ph.appendChild(im)}
+  else{ph.appendChild(el("div","mono2",m.name.split(" ").filter(w=>/^[A-Z]/.test(w)).slice(0,2).map(w=>w[0]).join("")));ph.appendChild(el("span","soon","Photo to come"))}
+  const tx=el("div","txt");tx.appendChild(el("h3",null,m.name));
+  if(m.nick)tx.appendChild(el("div","nick","“"+m.nick+"”"));
+  tx.appendChild(el("div","role",m.role));d.appendChild(ph);d.appendChild(tx);tg.appendChild(d);
+});
+const org=document.getElementById("org");
+function roleRow(r){const d=el("div","r"+(r[2]?" head":"")+(r[1]?"":" vacant"));d.appendChild(el("span","t",r[0]));if(r[1])d.appendChild(el("span","who",r[1]));return d}
+(function(){
+  const top=el("div","top");top.appendChild(document.createTextNode(ORG.top[0]));top.appendChild(el("small",null,ORG.top[1]));org.appendChild(top);
+  org.appendChild(el("div","stem"));
+  const cols=el("div","cols");
+  ORG.depts.forEach(([n,rows])=>{const d=el("div","dept");d.appendChild(el("h4",null,n));rows.forEach(r=>d.appendChild(roleRow(r)));cols.appendChild(d)});
+  org.appendChild(cols);
+  const sup=el("div","dept support");sup.appendChild(el("h4",null,"Studio support"));ORG.support.forEach(r=>sup.appendChild(roleRow(r)));org.appendChild(sup);
+})();
+/* equal visual area for every logo, so wide wordmarks and tall marks read the same size */
+const cg=document.getElementById("clientGrid");
+CLIENTS.forEach(([slug,name])=>{const li=el("li"),im=el("img");im.alt=name;im.loading="lazy";
+  im.onload=()=>{im.style.width=Math.min(190,Math.sqrt(6400*im.naturalWidth/im.naturalHeight))+"px"};
+  im.src=`img/clients/${slug}.png`;li.appendChild(im);cg.appendChild(li)});
+document.querySelectorAll("[data-legal]").forEach(b=>b.onclick=()=>{const d=document.getElementById(b.dataset.legal);d.showModal();d.scrollTop=0});
+document.querySelectorAll(".legal").forEach(d=>d.addEventListener("click",e=>{const r=d.getBoundingClientRect();if(e.target===d&&(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom))d.close()}));
+
+/* Words: split into spans. Hero quote is driven by scene.js; philosophy words light up as they scroll into view */
+function split(p,cls){const ws=p.textContent.trim().split(/\s+/);p.textContent="";ws.forEach((w,i)=>{if(i)p.appendChild(document.createTextNode(" "));p.appendChild(el("span",cls,w))})}
+split(document.getElementById("quote"),"w");
+const paras=[...document.querySelectorAll("#philosophy .lead,#philosophy .body")];
+paras.forEach(p=>split(p,"rw"));
+if(!matchMedia("(prefers-reduced-motion: reduce)").matches){
+  let queued=false;
+  const reveal=()=>{queued=false;const vh=innerHeight;
+    paras.forEach(p=>{const ws=p.children,n=ws.length,prog=Math.min(1,Math.max(0,(vh*.9-p.getBoundingClientRect().top)/(vh*.5)));
+      for(let i=0;i<n;i++)ws[i].style.opacity=.14+.86*Math.min(1,Math.max(0,prog*n*1.15-i))})};
+  addEventListener("scroll",()=>{if(!queued){queued=true;requestAnimationFrame(reveal)}},{passive:true});
+  addEventListener("resize",reveal);reveal();
+}
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="scene.js?v=23"></script>
+</body>
+</html>
