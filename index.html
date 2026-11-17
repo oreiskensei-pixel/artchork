@@ -97,10 +97,17 @@ dd{font-size:21px}
 #contact .mail{margin-top:24px;font-size:clamp(20px,2vw,26px)}#contact .mail a{text-underline-offset:5px}
 footer{position:relative;z-index:5;background:#000;padding:30px 28px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 @media(max-width:900px){.two{grid-template-columns:1fr;gap:40px}}
+.menu{display:none;background:none;border:0;padding:10px 8px;margin:-10px -8px -10px 0;cursor:pointer}
+.menu span{display:block;width:24px;height:1.5px;margin:5px 0;background:var(--fg);transition:transform .25s,opacity .25s}
+header.open .menu span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+header.open .menu span:nth-child(2){opacity:0}
+header.open .menu span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 @media(max-width:820px){
-  header{flex-wrap:wrap;row-gap:12px;padding:14px 16px 12px;background:linear-gradient(#000e 65%,#0000)}
-  nav{width:100%;justify-content:space-between;gap:12px;overflow-x:auto;scrollbar-width:none}
-  nav a{font-size:11px;letter-spacing:.08em;white-space:nowrap}
+  header{align-items:center;padding:14px 16px;background:linear-gradient(#000e 65%,#0000)}
+  .menu{display:block}
+  nav{display:none;position:absolute;top:100%;right:12px;flex-direction:column;gap:0;min-width:210px;padding:6px 0;background:rgba(2,4,3,.96);border:1px solid var(--line)}
+  header.open nav{display:flex}
+  nav a{padding:14px 22px;font-size:12px}
 }
 @media(max-width:600px){
   body{font-size:18px}.logo .mark{height:22px}.logo .wm{font-size:22px}
@@ -115,11 +122,11 @@ footer{position:relative;z-index:5;background:#000;padding:30px 28px;font-family
 .phil .lead{margin-bottom:28px}
 .phil p.body{color:var(--mut);margin-bottom:20px;max-width:62ch}
 .sub{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin:120px 0 36px}
-.team{display:grid;grid-template-columns:repeat(12,1fr);gap:64px 40px}
-.member{display:flex;flex-direction:column;gap:14px}.member .txt{display:flex;flex-direction:column;gap:6px}.team{container-type:inline-size}
+.team{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:64px 40px}
+.member{display:flex;flex-direction:column;gap:14px;min-width:0}.member .txt{display:flex;flex-direction:column;gap:6px}.team{container-type:inline-size}
 .member.head,.member.rest{align-items:center;text-align:center}.member.head .txt,.member.rest .txt{align-items:center}
 .member.head{grid-column:span 4}.member.head .ph,.member.rest .ph{width:calc(.7*((100cqw - 440px)/3 + 120px))}
-@media(max-width:900px){.member.head .ph,.member.rest .ph{width:70%}}.member.rest{grid-column:span 3}
+@media(max-width:900px){.team{grid-template-columns:repeat(2,minmax(0,1fr));gap:56px 20px}.member.head .ph,.member.rest .ph{width:calc((100cqw - 20px)/2*.8)}.member.head:nth-of-type(4){grid-column:1/-1}.member.head h3{font-size:20px}.member.head .nick{font-size:16px}.member.head .role{font-size:10px}}.member.rest{grid-column:span 3}
 .grp{grid-column:1/-1;text-align:center;margin-bottom:-36px;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
 @media(min-width:901px){.member.c2{grid-column:4/span 3}}
 .member.dir{grid-column:span 12;flex-direction:row;align-items:center;gap:48px}.member.dir .ph{width:min(310px,40%);flex:none}
@@ -138,8 +145,8 @@ section#clients{background:linear-gradient(90deg,transparent calc(50% - 640px),r
 .logos li{flex:0 0 25%;height:170px;display:grid;place-items:center;padding:20px}
 .logos img{display:block;max-width:82%;max-height:100%;height:auto}
 @media(max-width:700px){.logos li{flex-basis:50%;height:130px}}
-@media(max-width:900px){.phil{grid-template-columns:1fr;gap:34px}.member.head,.member.rest{grid-column:span 6}}
-@media(max-width:600px){.member.head,.member.rest{grid-column:span 6}.member.dir{flex-direction:column;align-items:flex-start;gap:20px}.member.dir .ph{width:70%}}
+@media(max-width:900px){.phil{grid-template-columns:1fr;gap:34px}.member.head,.member.rest{grid-column:auto}.member.dir{grid-column:1/-1}.member.head:nth-of-type(4){grid-column:1/-1}}
+@media(max-width:600px){.member.dir{flex-direction:column;align-items:flex-start;gap:20px}.member.dir .ph{width:70%}}
 .org{display:grid;justify-items:center}
 .org .top{padding:16px 28px;border:1px solid rgba(255,255,255,.55);font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
 .org .top small{display:block;color:var(--mut);letter-spacing:.04em;margin-top:6px;text-transform:none;font-family:var(--serif);font-style:italic;font-size:17px}
@@ -194,7 +201,8 @@ footer .links button:hover{color:#fff}
 <canvas id="c" aria-hidden="true"></canvas>
 <header>
   <a class="logo" href="#top" aria-label="ART+CHORK, home"><svg class="mark" viewBox="12 0 384 322" aria-hidden="true"><use href="#mk"/></svg><span class="wm" aria-hidden="true">ART<svg class="wp" viewBox="0 0 60 100"><circle cx="30" cy="10" r="7"/><path d="M30 30V100M6 64H54"/></svg>CHORK</span></a>
-  <nav aria-label="Primary"><a href="#philosophy">Philosophy</a><a href="#works">Works</a><a href="#team">Team</a><a href="#clients">Clients</a><a href="#contact">Contact</a></nav>
+  <button class="menu" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  <nav id="nav" aria-label="Primary"><a href="#philosophy">Philosophy</a><a href="#works">Works</a><a href="#team">Team</a><a href="#clients">Clients</a><a href="#contact">Contact</a></nav>
 </header>
 
 <main id="top">
@@ -491,6 +499,13 @@ const cg=document.getElementById("clientGrid");
 CLIENTS.forEach(([slug,name])=>{const li=el("li"),im=el("img");im.alt=name;im.loading="lazy";
   im.onload=()=>{im.style.width=Math.min(190,Math.sqrt(6400*im.naturalWidth/im.naturalHeight))+"px"};
   im.src=`img/clients/${slug}.png`;li.appendChild(im);cg.appendChild(li)});
+/* mobile menu */
+const hd=document.querySelector("header"),mb=hd.querySelector(".menu");
+const setMenu=o=>{hd.classList.toggle("open",o);mb.setAttribute("aria-expanded",o)};
+mb.onclick=()=>setMenu(!hd.classList.contains("open"));
+hd.querySelectorAll("nav a").forEach(a=>a.addEventListener("click",()=>setMenu(false)));
+document.addEventListener("click",e=>{if(!hd.contains(e.target))setMenu(false)});
+addEventListener("keydown",e=>{if(e.key==="Escape")setMenu(false)});
 document.querySelectorAll("[data-legal]").forEach(b=>b.onclick=()=>{const d=document.getElementById(b.dataset.legal);d.showModal();d.scrollTop=0});
 document.querySelectorAll(".legal").forEach(d=>d.addEventListener("click",e=>{const r=d.getBoundingClientRect();if(e.target===d&&(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom))d.close()}));
 
